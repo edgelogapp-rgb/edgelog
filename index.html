@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EdgeLog — Trade Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:#0d0f14;color:#e8edf5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased;}
+  .logo{display:flex;align-items:center;gap:12px;margin-bottom:48px;}
+  .logo img{width:48px;height:48px;border-radius:12px;border:1px solid rgba(79,142,245,0.3);box-shadow:0 0 20px rgba(79,142,245,0.2);}
+  .logo-name{font-size:28px;font-weight:800;letter-spacing:-0.04em;color:#e8edf5;}
+  .logo-name em{color:#4f8ef5;font-style:normal;}
+  .tagline{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#4a5572;margin-bottom:56px;}
+  .cards{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .card{
+    display:flex;flex-direction:column;gap:10px;
+    border:1px solid #252d42;background:#131720;
+    border-radius:10px;padding:28px 36px;text-decoration:none;
+    transition:border-color .2s,box-shadow .2s;
+    min-width:200px;text-align:center;
+  }
+  .card:hover{border-color:rgba(79,142,245,0.5);box-shadow:0 8px 32px rgba(79,142,245,0.1);}
+  .card-icon{font-size:1.8rem;}
+  .card-title{font-size:1rem;font-weight:700;color:#e8edf5;letter-spacing:-.02em;}
+  .card-sub{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#4a5572;}
+  .footer{margin-top:56px;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;color:#2a3250;}
+</style>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://edgelogapp-rgb.github.io/edgelog/icon.png" onerror="this.style.display='none'" alt="EdgeLog"/>
+    <span class="logo-name">Edge<em>Log</em></span>
+  </div>
+  <div class="tagline">Trade Journal · Legal Documents</div>
+  <div class="cards">
+    <a class="card" href="https://edgelogapp-rgb.github.io/edgelog/privacy.html">
+      <div class="card-icon">🔒</div>
+      <div class="card-title">Privacy Policy</div>
+      <div class="card-sub">View document</div>
+    </a>
+    <a class="card" href="https://edgelogapp-rgb.github.io/edgelog/terms.html">
+      <div class="card-icon">📋</div>
+      <div class="card-title">Terms of Service</div>
+      <div class="card-sub">View document</div>
+    </a>
+  </div>
+  <div class="footer">© 2026 EdgeLog · Governed by the laws of India</div>
+</body>
+</html>
