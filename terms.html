@@ -638,10 +638,10 @@ body {
     <span class="hdr-subt">Trade Journal</span>
     <div class="hdr-right">
       <nav class="hdr-nav">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
+        <a href="https://edgelogapp-rgb.github.io/edgelog/privacy.html">Privacy</a>
+        <a href="https://edgelogapp-rgb.github.io/edgelog/terms.html">Terms</a>
       </nav>
-      <div class="hdr-live"><div class="live-dot"></div>Live &nbsp;<span id="live-clock" style="font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;color:var(--app-t2);opacity:.7"></span></div>
+      <div class="hdr-live"><div class="live-dot"></div>Live</div>
     </div>
   </div>
 </header>
@@ -659,10 +659,9 @@ body {
   <p class="hero-sub">The agreement between us — clear and complete.</p>
   <div class="meta-bar">
     <div class="meta-cell"><div class="meta-lbl">Effective Date</div><div class="meta-val">14 Mar 2025</div></div>
-    <div class="meta-cell"><div class="meta-lbl">Last Revised</div><div class="meta-val" id="meta-revised">—</div></div>
+    <div class="meta-cell"><div class="meta-lbl">Last Revised</div><div class="meta-val">14 Mar 2026</div></div>
     <div class="meta-cell"><div class="meta-lbl">Version</div><div class="meta-val">1.0</div></div>
     <div class="meta-cell"><div class="meta-lbl">Jurisdiction</div><div class="meta-val">India</div></div>
-    <div class="meta-cell"><div class="meta-lbl">Local Time</div><div class="meta-val" id="meta-time" style="color:var(--app-green);font-size:.68rem">—</div></div>
   </div>
 </div>
 
@@ -906,10 +905,6 @@ body {
               Acknowledged ≤ 3 days · Resolved ≤ 30 days
             </div>
           </div>
-          <div class="o-row">
-            <div class="o-icon"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <span>Flat no. 402, Srinath Residency, Marine Drive, Kadma, Jamshedpur, Jharkhand — 831005, India</span>
-          </div>
         </div>
       </div>
       <p style="margin-top:18px">When submitting a grievance, please include your full name, contact details, a clear description of your concern, and supporting evidence such as order IDs or screenshots. All communications are treated with strict confidentiality.</p>
@@ -927,55 +922,18 @@ body {
         <span class="f-wordmark">Edge<em>Log</em></span>
       </div>
       <nav class="f-links">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
+        <a href="https://edgelogapp-rgb.github.io/edgelog/privacy.html">Privacy Policy</a>
+        <a href="https://edgelogapp-rgb.github.io/edgelog/terms.html">Terms of Service</a>
         <a href="mailto:support.edgelog@gmail.com">Support</a>
         <a href="mailto:grievance.edgelog@gmail.com">Grievance</a>
       </nav>
     </div>
     <div class="footer-bot">
-      <span class="f-copy">© <span id="copy-year">2026</span> EdgeLog. All rights reserved.</span>
+      <span class="f-copy">© 2026 EdgeLog. All rights reserved.</span>
       <span class="f-law">Governed by the laws of India · IT Act 2000 · v1.0</span>
     </div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  var now    = new Date();
-  var dd     = String(now.getDate()).padStart(2,"0");
-  var mon    = months[now.getMonth()];
-  var yyyy   = now.getFullYear();
-  var dateStr = dd + " " + mon + " " + yyyy;
-
-  var revised = document.getElementById("meta-revised");
-  if (revised) revised.textContent = dateStr;
-
-  var copyYear = document.getElementById("copy-year");
-  if (copyYear) copyYear.textContent = yyyy;
-
-  var istOffset = 5.5 * 60;
-  function getIST(){
-    var n    = new Date();
-    var utc2 = n.getTime() + n.getTimezoneOffset()*60000;
-    var ist2 = new Date(utc2 + istOffset*60000);
-    var h2   = ist2.getHours() % 12 || 12;
-    var m2   = String(ist2.getMinutes()).padStart(2,"0");
-    var s2   = String(ist2.getSeconds()).padStart(2,"0");
-    var ap2  = ist2.getHours() >= 12 ? "PM" : "AM";
-    return String(h2).padStart(2,"0")+":"+m2+":"+s2+" "+ap2+" IST";
-  }
-  function tick(){
-    var ts = getIST();
-    ["live-clock","meta-time"].forEach(function(id){
-      var el = document.getElementById(id);
-      if(el) el.textContent = ts;
-    });
-  }
-  setInterval(tick, 1000);
-  tick();
-})();
-</script>
 </body>
 </html>
